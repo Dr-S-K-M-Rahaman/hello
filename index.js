@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
 
-const PORT = 3002;
-const HOST = '0.0.0.0'; // Listen on all network interfaces
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
