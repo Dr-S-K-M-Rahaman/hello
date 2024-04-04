@@ -1,14 +1,13 @@
 const express = require('express');
 const app = express();
+const port = 3000;
 
-const PORT = 3001;
-
-app.use(express.json());
-
+// Define a route for the homepage
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+    res.send('Hello World!');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://${HOST}:${PORT}/`);
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
